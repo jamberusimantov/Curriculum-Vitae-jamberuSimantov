@@ -1,4 +1,130 @@
-body{
-background: url(/assets/34026.jpg) fixed no-repeat center;
-background-size: cover;
+*{
+  box-sizing: border-box;
+  font-family: 'Commissioner', sans-serif;
 }
+.clr{
+  clear: both;
+}
+body{
+margin: 0px;
+padding: 0px;
+font-size: large;
+color: #3b5998;
+}
+#date_line{
+  background-color: #3b5998;
+  color: #eee;
+  text-align: right;
+  padding: 0px 2vh ;
+  margin-bottom: 2vh;
+  font-weight: 100;
+  font-size: smaller;
+}
+#date, #time{
+  display: inline-block;
+  padding: 1vh;
+}
+#nav_list{
+  display: inline-flex;
+  flex-flow: row wrap;
+  list-style: none;
+  padding: 0px;
+}
+li:hover{
+  background-color: #3b5998;
+}
+li:hover .li{
+  color: #eee;
+}
+.li{
+  display: inline-block;
+  text-decoration: none;
+  padding: 1vh 5vw;
+}
+.li i{
+  padding: 0px 1vw;
+}
+#dropdown:hover #dropdown_content{
+  display: inline-block;
+} 
+#dropdown_content{
+  position: absolute;
+  top: 4vh;
+  display: none;
+  padding: 2vh 2vw;
+  box-sizing: border-box; 
+  background-color:#3b5998;
+  color: #eee; 
+}
+#dropdown_head h2{
+  padding: 2vh;
+}
+.column{
+  box-sizing: border-box;
+}
+.column h3{
+  padding: 2vh;
+}
+.column a{
+  display: block;
+  text-decoration: none;
+  color: #eee;
+  padding: 2vh;
+}
+
+
+@media only screen and (min-width: 768px){
+  [id="nav_list"]{
+    position: static;
+  }
+  [id="dropdown"]{
+    position: relative;
+  }
+  [id="dropdown_content"]{
+    left: 0vh;
+    width: 60vw;
+  }
+  [class="column"]{
+    display: inline-block;
+    width: 18vw;
+  }
+}
+@media only screen and (max-width: 768px){
+  [id="nav_list"]{
+    position: relative;
+  }
+  [id="dropdown"]{
+    position: static;
+  }
+  [id="dropdown_content"]{
+    width: 100vw;
+    left: 0px;
+  }
+  [class="column"]{
+    display: inline-block;
+    width: 31vw;
+  }
+}
+
+
+
+  
+
+
+
+
+/* #inspirational{
+  background-image: url("/assets/34029.jpg");
+  color:#3b5998;
+  height: 67vh;
+  padding: 3vh;
+  margin: 0px;
+  text-align: center;
+  text-shadow: #eee 5px 5px 5px;
+  font-size: 3vw;
+  font-weight: 100;
+}
+#inspirational h1{
+  margin: 0;
+} */
+

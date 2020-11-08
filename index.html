@@ -1,15 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Curriculum Vitae ">
-  <meta name="Author" content="Siman tov Jamberu"> 
-  <title>Siman tov Jamberu</title>
+  <meta name="Author" content="Siman tov Jamberu">
+  <meta http-equiv="refresh" content="30">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="/Curriculum Vitae.js"></script>
+  <title>Siman tov Jamberu</title>
 </head>
+
 <body>
-  <h1>Jamberu Siman tov</h1>
+  <header>
+    <div id="date_line">
+      <div id="time"></div>
+      <div id="date"></div>
+    </div>
+    <nav>
+      <ul id="nav_list">
+        <li><a class="li" href="#">About</a></li>
+        <li><a class="li" href="#">Contact</a></li>
+        <li id="dropdown">
+          <a class="li" id="dropdown_btn" href="#">Portfolio<i class="fa fa-caret-down"></i></a>
+          <div id="dropdown_content">
+            <div id="dropdown_head">
+              <h2>progremming</h2><hr>
+            </div>
+            <div id="row">
+              <div class="column">
+                <h3>title1</h3>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+              <div class="column">
+                <h3>title2</h3>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+              <div class="column">
+                <h3>title3</h3>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+              <div class="clr"></div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+
+    <!-- <div id="inspirational">
+      <h1><span id="h1_line1">YOU ONLY LIVE ONCE</span><br>BUT IF YOU DO IT RIGHT <br><span id="h1_line3">ONCE IS
+          ENOUGH</span></h1>
+    </div> -->
+    <!-- <ul id="list"></ul> -->
+
+  </main>
+  <footer>
+
+  </footer>
 </body>
+<script>
+  let date = new Date();
+  document.getElementById("date").innerHTML = date.getDate() + " / " + (date.getMonth()+1) + " / " + date.getUTCFullYear();
+  document.getElementById("time").innerHTML =  date.getHours() + " : " + date.getMinutes();
+
+  // let navItems = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  // let navList = "<ul>";
+  // navItems.forEach(listBuilder);
+  // navList += "</ul>";
+
+  // function listBuilder(value) {
+  //   navList += "<li>" + value + "</li>";
+  // }
+
+  // document.getElementById("list").innerHTML = navList;
+
+</script>
+
 </html>
