@@ -9,6 +9,7 @@
   <meta http-equiv="refresh" content="30">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="/Curriculum Vitae.js"></script>
   <title>Siman tov Jamberu</title>
@@ -22,13 +23,15 @@
     </div>
     <nav>
       <ul id="nav_list">
-        <li><a class="li" href="#">About</a></li>
-        <li><a class="li" href="#">Contact</a></li>
-        <li id="dropdown">
-          <a class="li" id="dropdown_btn" href="#">Portfolio<i class="fa fa-caret-down"></i></a>
+        <li class="nav_item"><a class="li" href="/index.html">Home</a></li>
+        <li class="nav_item"><a class="li" href="#">About</a></li>
+        <li class="nav_item"><a class="li" href="#">Contact</a></li>
+        <li id="dropdown" class="nav_item">
+          <span class="li" id="dropdown_btn" onclick="OpenWindow()">Portfolio<i class="fa fa-caret-down"></i></span>
           <div id="dropdown_content">
             <div id="dropdown_head">
-              <h2>progremming</h2><hr>
+              <h2>progremming</h2>
+              <hr>
             </div>
             <div id="row">
               <div class="column">
@@ -53,6 +56,7 @@
             </div>
           </div>
         </li>
+        <li class="nav_item" id ="searchFlex"><button id="search_btn"><i class="fa fa-search"></i></button><input id="search" type="text"></li>
       </ul>
     </nav>
   </header>
@@ -70,9 +74,16 @@
   </footer>
 </body>
 <script>
-  let date = new Date();
-  document.getElementById("date").innerHTML = date.getDate() + " / " + (date.getMonth()+1) + " / " + date.getUTCFullYear();
-  document.getElementById("time").innerHTML =  date.getHours() + " : " + date.getMinutes();
+document.getElementById("date").innerText = myTime(date);
+document.getElementById("time").innerText = myDate(date);
+
+
+
+
+
+
+
+
 
   // let navItems = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   // let navList = "<ul>";
